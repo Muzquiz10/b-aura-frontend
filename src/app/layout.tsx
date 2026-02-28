@@ -1,9 +1,4 @@
-import './globals.css'
-
-export const metadata = {
-  title: 'B-AURA',
-  description: 'Frontend conectado a WordPress'
-}
+import Header from '../components/Header'
 
 export default function RootLayout({
   children,
@@ -13,6 +8,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <Header />
         {children}
       </body>
     </html>

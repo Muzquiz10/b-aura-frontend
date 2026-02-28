@@ -1,0 +1,40 @@
+/* src/components/Header.css */
+
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.nav ul li a:hover {
+  color: #0070f3; /* color hover ejemplo */
+}

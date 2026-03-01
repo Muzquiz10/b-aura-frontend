@@ -23,7 +23,7 @@
   height: 50px;
 }
 
-.nav ul {
+.nav > ul {
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -36,5 +36,64 @@
 }
 
 .nav ul li a:hover {
-  color: #0070f3; /* color hover ejemplo */
+  color: #f67f8f; 
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #80c37e;
+  font-size: 1rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+}
+
+/* Flechita */
+.arrow {
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+}
+
+/* Rotación cuando está abierto */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-button:hover {
+  color: #f67f8f;
+}
+
+/* Estado cerrado */
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 0.8rem 1rem;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.25s ease;
+}
+
+/* Estado abierto */
+.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

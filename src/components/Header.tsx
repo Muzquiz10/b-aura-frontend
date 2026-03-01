@@ -18,7 +18,16 @@ export default function Header() {
         <nav className="nav">
           <ul>
             <li><Link href="/">Inicio</Link></li>
-            <li><Link href="/Servicios">Otros Servicios</Link></li>
+            <li className="dropdown">
+              <button className="dropdown-button">
+              Servicios <span className="arrow">▾</span>
+              </button>
+              <ul className="dropdown-menu">
+                <li><Link href="/servicios/cursos">Cursos</Link></li>
+                <li><Link href="/servicios/asesorias">Asesorías</Link></li>
+              </ul>
+            </li>
+
             <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/sobre-mi">Sobre mi</Link></li>
             <li><Link href="/contacto">Contacto</Link></li>
